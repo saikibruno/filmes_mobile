@@ -1,35 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React from "react"
+import { NavigationContainer } from "@react-navigation/native"
+import TabNavi from "./src/components/TabNavi"
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import DetalhePopular from "./src/pages/popular/DetalhePopular";
 
-export default function App() {
-  return (                    
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>      
-        <Text style={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Text>
-      </ScrollView>
-    </SafeAreaView>    
-  );
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="TabNavi" component={TabNavi} options={{ headerShown: false }}/>
+        <Stack.Screen name="DetalhePopular" component={DetalhePopular} options={{title: 'Detalhes'}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 50,
-    
-  },
-  scrollView: {
-    backgroundColor: '#696969',
-    marginHorizontal: 10,
-  },
-  text: {
-    fontSize: 50,
-  },
-});
+export default App;
