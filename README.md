@@ -43,7 +43,7 @@ TMDB_KEY='Bearer TOKEN_COPIADO_DO_SITE'
 npm install expo
 
 #Executar o projeto
-npm start
+expo start
 ```
 
 ## 🛠️ Construído com
