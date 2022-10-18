@@ -2,6 +2,14 @@ import { Link, useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
 import { View, Text, Image, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import { Card, Paragraph, Title } from "react-native-paper";
+import { AppRegistry } from "react-native";
+import App from "./App";
+
+AppRegistry.registerComponent("App", () => App);
+
+AppRegistry.runApplication("App", {
+  rootTag: document.getElementById("root")
+});
 
 function Gobutton({ screenName, idNumber }) {
     const navigation = useNavigation();
