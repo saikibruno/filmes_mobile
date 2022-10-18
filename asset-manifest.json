@@ -1,0 +1,23 @@
+{
+  "files": {
+    "app.js": "/filme_mobile/static/js/app.95f84c6e.chunk.js",
+    "app.js.map": "/filme_mobile/static/js/app.95f84c6e.chunk.js.map",
+    "runtime~app.js": "/filme_mobile/static/js/runtime~app.ed4d493e.js",
+    "runtime~app.js.map": "/filme_mobile/static/js/runtime~app.ed4d493e.js.map",
+    "static/js/2.accbd25f.chunk.js": "/filme_mobile/static/js/2.accbd25f.chunk.js",
+    "static/js/2.accbd25f.chunk.js.map": "/filme_mobile/static/js/2.accbd25f.chunk.js.map",
+    "fonts/MaterialCommunityIcons.ttf": "/filme_mobile/./fonts/MaterialCommunityIcons.ttf",
+    "favicon-16.png": "/filme_mobile/favicon-16.png",
+    "favicon-32.png": "/filme_mobile/favicon-32.png",
+    "favicon.ico": "/filme_mobile/favicon.ico",
+    "index.html": "/filme_mobile/index.html",
+    "manifest.json": "/filme_mobile/manifest.json",
+    "serve.json": "/filme_mobile/serve.json",
+    "static/js/2.accbd25f.chunk.js.LICENSE.txt": "/filme_mobile/static/js/2.accbd25f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.ed4d493e.js",
+    "static/js/2.accbd25f.chunk.js",
+    "static/js/app.95f84c6e.chunk.js"
+  ]
+}
