@@ -8,7 +8,7 @@ export default function ListaPopular(props) {
     const [dados, setDados] = useState()
 
     useEffect(() => {
-        api.get('/movie/popular').then(result => {
+        api.get('/movie/popular?language=pt-BR').then(result => {
             setDados(result.data.results)
         })
             .catch(() => (alert('erro')))
