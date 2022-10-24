@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "filme_mobile",
-    "slug": "filme_mobile",
+    "name": "filmes_mobile",
+    "slug": "filmes_mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

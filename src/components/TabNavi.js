@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ListaPopular from "../pages/popular/ListaPopular";
-import ListaTopRated from "../pages/topRated/ListaTopRated";
+
+import ListaPopular from "../pages/Popular/ListaPopular";
+import ListaTopRated from "../pages/TopRated/ListaTopRated";
 
 const Tab = createBottomTabNavigator();
 

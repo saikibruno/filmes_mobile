@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, FlatList, StyleSheet, Button } from 'react-native';
+import Index from '../../components/index';
+import api from '../../service/Api'
 
-import Index from '../../../index';
-import api from '../../services/Api'
-
-export default function ListaTopRated(props) {
+export default function ListaPopular(props) {
     const [carregando, setCarregando] = useState(true)
     const [dados, setDados] = useState()
 
@@ -21,13 +20,12 @@ export default function ListaTopRated(props) {
             {
                 carregando ? <ActivityIndicator /> : (
                     <FlatList
-                        style={styles.card}
-                        data={dados}
+                        data={dados}                        
                         keyExtractor={({ id }, index) => id}
                         renderItem={({ item }) =>
-                            <>
-                                <Index data={item} />                                
-                            </>
+                            <View style={{paddingBottom:20}}>
+                                <Index data={item}/>
+                            </View>
                         }
                     />
                 )
@@ -38,8 +36,8 @@ export default function ListaTopRated(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignContent: 'center',
-        backgroundColor: 'yellow',
+        backgroundColor: 'black',
+        padding:10
     },
     bar: {
         backgroundColor: 'white',
@@ -49,12 +47,6 @@ const styles = StyleSheet.create({
     },
     botao: {
         backgroundColor: 'white',
-        color: 'black',
-    },
-    card: {
-        padding: 5,
-        backgroundColor: 'red',
-        width: 300,
-        alignSelf: 'center'
+        color: 'black'
     }
 });

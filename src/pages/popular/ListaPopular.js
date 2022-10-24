@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, FlatList, StyleSheet, Button } from 'react-native';
-import Index from '../../../index';
-import api from '../../services/Api'
+import Index from '../../components/index';
+import api from '../../service/Api'
 
 export default function ListaPopular(props) {
     const [carregando, setCarregando] = useState(true)

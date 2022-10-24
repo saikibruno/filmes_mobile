@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet, Image } from 'react-native';
 
-import api from '../../services/Api'
+import api from '../../service/Api'
 
 export default function DetalhePopular(props) {
 
