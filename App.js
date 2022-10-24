@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import TabNavi from './src/components/TabNavi';
-import DetalhePopular from "./src/pages/Popular/DetalhePopular"
+import DetalhePopular from "./src/pages/popular/DetalhePopular"
 
 
 const Stack = createNativeStackNavigator();
