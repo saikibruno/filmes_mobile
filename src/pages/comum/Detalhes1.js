@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet, Image, ScrollView, FlatList } from 'react-native';
 import { Paragraph } from 'react-native-paper';
@@ -7,8 +6,8 @@ import PosterAtor from "../../components/PosterAtor";
 
 import api from '../../service/Api'
 
-function Detalhes(props) {
-    const [carregando, setCarregando] = useState(true)
+function Detalhes1(props) {
+    // const [carregando, setCarregando] = useState(true)
     const [dados, setDados] = useState([])
     const [atores, setAtores] = useState([])
 
@@ -16,20 +15,20 @@ function Detalhes(props) {
         api.get('/movie/' + props.route.params + '?language=pt-BR').then(result => {
             setDados(result.data)
         })
-            .catch(() => (alert('erro')))
-            .finally(() => setCarregando(false))
+            // .catch(() => (alert('erro')))
+            // .finally(() => setCarregando(false))
 
         api.get('/movie/' + props.route.params + '/credits?language=pt-BR').then(result => {
             setAtores(result.data.cast)
         })
-            .catch(() => (alert('erro')))
-            .finally(() => setCarregando(false))
+            // .catch(() => (alert('erro')))
+            // .finally(() => setCarregando(false))
     }, [])
 
     return (
         <View>
-            {
-                carregando ? <ActivityIndicator /> : (
+            {/* {
+                carregando ? <ActivityIndicator /> : ( */}
 
                     <ScrollView style={styles.scroll} horizontal={false}>
                         <Text style={styles.nomeFilme}>{dados.title}</Text>
@@ -40,7 +39,13 @@ function Detalhes(props) {
                                 }} />
                             <Text style={styles.tituloo}>Votos:</Text>
                             <Text style={styles.vote}>{dados.vote_average} <Icon name={'staro'} size={20} color={'#A9CCE3'} /></Text>
-                            
+
+                            <Text style={styles.tituloo}>Genero: </Text>
+                            <View style={styles.containerGenero} >
+                                {/* {dados.genres.map((item, i) => (
+                                    <Text key={i} style={styles.nomeGenero}>{item.name}, </Text>
+                                ))} */}
+                            </View>
                             <Text style={styles.tituloo}>Resumo: </Text>
                             <Paragraph style={styles.resumo}>{dados.overview}</Paragraph>
                             <Text style={styles.tituloo}>Atores: </Text>
@@ -57,8 +62,8 @@ function Detalhes(props) {
 
                         </View>
                     </ScrollView>
-                )
-            }
+                {/* )
+            } */}
         </View>
     );
 }
@@ -115,4 +120,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Detalhes;
+export default Detalhes1;

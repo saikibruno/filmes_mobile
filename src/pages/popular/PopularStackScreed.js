@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Detalhes from "../comum/Detalhes";
 import ListaPopularScreed from "./ListaPopularScreed";
+import DetalhesAtor from "../comum/DetalhesAtor"
 
 
 const PopularStack = createNativeStackNavigator();
@@ -14,7 +15,18 @@ function PopularStackScreen() {
                 component={Detalhes}
                 options={{
                     title: 'Detalhes',
-                    headerTintColor: '#fff',
+                    headerTintColor: '#A9CCE3',
+                    headerStyle: {
+                        backgroundColor: '#6D6D6D'
+                    }
+                }}
+            />
+            <PopularStack.Screen
+                name="DetalhesAtor"
+                component={DetalhesAtor}
+                options={{
+                    title: 'Detalhes Ator',
+                    headerTintColor: '#A9CCE3',
                     headerStyle: {
                         backgroundColor: '#6D6D6D'
                     }
