@@ -3,7 +3,7 @@ import { View, Text, ActivityIndicator, FlatList, StyleSheet, Button } from 'rea
 import Index from '../../components/index';
 import api from '../../service/Api'
 
-export default function ListaPopular(props) {
+export default function ListaPopularScreed(props) {
     const [carregando, setCarregando] = useState(true)
     const [dados, setDados] = useState()
 
@@ -36,17 +36,7 @@ export default function ListaPopular(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black',
-        padding:10
-    },
-    bar: {
-        backgroundColor: 'white',
-    },
-    navigate: {
-        backgroundColor: 'black',
-    },
-    botao: {
-        backgroundColor: 'white',
-        color: 'black'
+        backgroundColor: '#4F4F4F',
+        padding:10    
     }
 });

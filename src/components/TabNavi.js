@@ -1,10 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Icon from 'react-native-vector-icons/Feather';
-
-import ListaPopular from "../pages/popular/ListaPopular";
-
-import ListaTopRated from "../pages/topRated/ListaTopRated";
+import PopularStackScreen from "../pages/popular/PopularStackScreed";
+import TopRatedStackScreed from "../pages/topRated/TopRatedStackScreed";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,17 +27,41 @@ function TabNavi() {
                 return <Icon name={iconName} size={size} color={color} />;
             },
             tabBarActiveTintColor: '#9C27B0',
-            tabBarInactiveTintColor: '#777',
+            tabBarInactiveTintColor: 'black',
+
             tabBarStyle: [
                 {
-                  "display": "flex"
+                    "display": "flex",
+                    "backgroundColor": "#A9A9A9",
                 },
                 null
-              ]
-        })}            
+            ]
+        })}
         >
-            <Tab.Screen name="Lista Popular" component={ListaPopular} />
-            <Tab.Screen name="Lista Top Rated" component={ListaTopRated} />                        
+            <Tab.Screen 
+            name="Lista Popular" 
+            component={PopularStackScreen} 
+            options={{                
+                headerStyle: {
+                    backgroundColor: '#A9A9A9',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                }
+            }} />
+            <Tab.Screen 
+            name="Lista Top Rated" 
+            component={TopRatedStackScreed}
+            options={{                
+                headerStyle: {
+                    backgroundColor: '#A9A9A9',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                }
+            }} />
         </Tab.Navigator>
     );
 }

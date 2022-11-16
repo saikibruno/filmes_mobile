@@ -1,9 +1,10 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, FlatList, StyleSheet, Button } from 'react-native';
 import Index from '../../components/index';
 import api from '../../service/Api'
 
-export default function ListaPopular(props) {
+function ListaTopRatedScreed(props) {
     const [carregando, setCarregando] = useState(true)
     const [dados, setDados] = useState()
 
@@ -29,24 +30,16 @@ export default function ListaPopular(props) {
                         }
                     />
                 )
-            }
+            }            
         </View>
     )
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black',
-        padding:10
-    },
-    bar: {
-        backgroundColor: 'white',
-    },
-    navigate: {
-        backgroundColor: 'black',
-    },
-    botao: {
-        backgroundColor: 'white',
-        color: 'black'
+        backgroundColor: '#4F4F4F',
+        padding:10 
     }
 });
+
+export default ListaTopRatedScreed;
